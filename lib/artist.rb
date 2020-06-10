@@ -19,13 +19,13 @@ class Artist
 
   def songs
     Song.all.each do |song|
-      @@all << song if song.artist == self
+      if song.artist.name
     end
   end
 
   def self.find_or_create_by_name(name)
     @@all.each do |artist|
-      if artist.name == name
+      if artist.name === self.name
         return artist
       else
         self.new(name)
