@@ -20,7 +20,7 @@ class Artist
   def songs
     new_array = []
     Song.all.each do |song|
-      if song.artist.name == self.name
+      if song.artist.name == @name
         new_array << song
       end
     end
