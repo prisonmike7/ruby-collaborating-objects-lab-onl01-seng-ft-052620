@@ -6,17 +6,15 @@ class MP3Importer
     @path = path
   end
 
-
-  def files()
-
+  def files
+    Dir.entries(@path)
   end
 
-  def import(path)
-    Dir.foreach ("./spec/fixtures/mp3s") do |file|
+  def import
+    Dir.entries(@path)
+    self.files.each do |file|
       Song.new_by_filename(file.basename)
     end
 
-
-    Song.new_by_filename(some_filename)
   end
 end
