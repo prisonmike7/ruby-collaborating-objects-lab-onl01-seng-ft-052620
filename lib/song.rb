@@ -19,8 +19,8 @@ class Song
   end
 
   def artist_name(filename)
-    artist_name = filename.split(" - ")[0]
-    artist_instance = Artist.find_or_create_by_name(artist_name)
+    artist_str = filename.split(" - ")[0]
+    artist_instance = Artist.find_or_create_by_name(artist_str)
     artist_instance.add_song(self)
 
     # if (self.artist.nil?)
