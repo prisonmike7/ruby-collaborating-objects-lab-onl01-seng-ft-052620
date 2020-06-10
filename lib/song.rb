@@ -1,7 +1,7 @@
 class Song
-  attr_accessor :artist
+  attr_accessor :artist, :name
 
-  # other methods
+  @@all = []
 
   def artist_name=(name)
     if (self.artist.nil?)
