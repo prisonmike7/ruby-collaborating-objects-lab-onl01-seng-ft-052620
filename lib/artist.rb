@@ -18,11 +18,9 @@ class Artist
   end
 
   def songs
-    new_array = []
     Song.all.each do |song|
-      new_array << song if song.artist.name == self.name
+      @@all << song if song.artist.name == self.name
     end
-    new_array
   end
 
   def self.find_or_create_by_name(name)
