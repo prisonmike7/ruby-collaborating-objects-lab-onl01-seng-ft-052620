@@ -10,7 +10,7 @@ class MP3Importer
     file_array = Dir.entries(@path)
     file_array.delete(".")
     file_array.delete("..")
-
+    file_array
   end
 
   def import
