@@ -24,6 +24,7 @@ class Artist
         new_array << song
       end
     end
+    new_array
   end
 
   def self.find_or_create_by_name(name)
