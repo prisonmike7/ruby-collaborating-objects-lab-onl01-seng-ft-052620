@@ -19,7 +19,7 @@ class Artist
 
   def songs
     Song.all.each do |song|
-      @@all << song.name if song.artist == self
+      @@all << song if song.artist == self
     end
   end
 
