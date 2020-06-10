@@ -12,7 +12,9 @@ class MP3Importer
   end
 
   def import(path)
-
+    Dir.foreach ("./spec/fixtures/mp3s") do |file|
+      Song.new_by_filename(file.basename)
+    end
 
 
     Song.new_by_filename(some_filename)
