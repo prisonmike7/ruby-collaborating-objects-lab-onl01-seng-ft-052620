@@ -7,7 +7,10 @@ class MP3Importer
   end
 
   def files
-    Dir.entries(@path)
+    file_array = Dir.entries(@path)
+    file_array.delete(".")
+    file_array.delete("..")
+
   end
 
   def import
